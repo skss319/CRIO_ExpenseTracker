@@ -20,11 +20,11 @@ export default function TransactionList({
   const [totalPages, setTotalPages] = useState(0);
 
   const handleDelete = (id) => {
-    const item = transactions.find((i) => i.id == id);
+    const item = transactions.find((i) => i.id === id);
     const price = Number(item.price);
     setBalance((prev) => prev + price);
 
-    editTransactions((prev) => prev.filter((item) => item.id != id));
+    editTransactions((prev) => prev.filter((item) => item.id !== id));
   };
 
   const handleEdit = (id) => {
